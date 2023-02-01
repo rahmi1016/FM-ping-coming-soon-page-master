@@ -1,0 +1,66 @@
+@use '../utils' as u;
+
+
+.logo {
+    margin-top: u.rem(80);
+    margin-bottom: u.rem(28);
+}
+
+.background {
+    width: u.rem(646);
+    height: auto;
+    margin-top: u.rem(25);
+    margin-bottom: u.rem(60);
+   
+    @include u.breakpoint-down(medium) {
+        width: u.rem(350);
+        height: auto;
+        margin-bottom: u.rem(120);
+    }
+}
+
+
+.form-data {
+    display: flex;
+    flex-direction: row;
+    margin-top: u.rem(40);
+    margin-bottom: u.rem(50);
+    @include u.breakpoint-down(medium) {
+        display: block;
+    }
+}
+
+#email {
+    width: u.rem(430);
+    height: u.rem(50);
+    border-radius: u.rem(32);
+    margin-right: u.rem(16);
+    border: 1px solid var(--light-gray);
+    
+    @include u.breakpoint-down(medium) {
+        width: u.rem(350);
+        height: u.rem(45);
+        margin-bottom: u.rem(5);
+    }
+}
+
+.btn {
+    width: u.rem(200);
+    height: u.rem(50);
+    border-radius: u.rem(32);
+    background-color: var(--blue);
+    cursor: pointer;
+    color: white;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(194, 211, 255, 1);
+     &:hover {
+        filter: brightness(120%);
+     }
+
+     @include u.breakpoint-down(medium) {
+        width: u.rem(350);
+        height: u.rem(45);
+        margin-top: u.rem(8);
+     }
+
+}

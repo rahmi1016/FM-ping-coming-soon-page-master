@@ -1,0 +1,104 @@
+@use '../utils' as u;
+
+body {
+    font-family: u.$Libre;
+   
+}
+
+h1 {
+    color: var(--gray);
+    font-weight: 300;
+    font-size: u.rem(40);
+    margin-top: u.rem(20);
+    margin-bottom: u.rem(10);
+    strong {
+        color: var(--very-dark-blue);
+    }
+
+    @include u.breakpoint-down(medium) {
+        font-size: u.rem(28);
+    }
+}
+
+p {
+    font-size: u.rem(18);
+    font-weight: 400;
+
+    @include u.breakpoint-down(medium) {
+        font-size: u.rem(16);
+    }
+    
+}
+
+input {
+    font-family: u.$Libre;
+    font-size: u.rem(16);   
+    @include u.breakpoint-down(medium) {
+        font-size: u.rem(14);
+    }
+}
+
+#email {
+    padding-left: u.rem(32);
+    color: var(--light-gray);
+    @include u.breakpoint-down(medium) {
+        margin-bottom: u.rem(0);
+    }
+}
+
+.btn {
+    font-weight: 400;
+    font-size: u.rem(16);
+    @include u.breakpoint-down(medium) {
+        font-size: u.rem(14);
+    }
+}
+
+.warning {
+    font-size: u.rem(14);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--light-red);
+    text-align: left;
+    margin-left: u.rem(32);
+    margin-top: u.rem(8);
+    display: none;
+    @include u.breakpoint-down(medium) {
+        font-size: u.rem(12);
+        text-align: center;
+        margin-left: u.rem(0);
+        margin-top: u.rem(0);
+        margin-bottom: u.rem(28);
+    }
+}
+
+
+
+.copyright {
+font-size: u.rem(14);
+color: var(--gray);
+
+@include u.breakpoint-down(medium) {
+    font-size: u.rem(12);
+}
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    &a {
+        color: hsl(228, 45%, 44%);
+  }
+}
+
+// ion-icon {
+//     color: var(--pale-blue);
+//     background-color: black;
+//     border: 1px solid black;
+//     border-radius: 50%;
+//     padding: 10px;
+
+//     &:hover {
+//         color: white;
+//         background-color: var(--pale-blue);
+//     }
+// }

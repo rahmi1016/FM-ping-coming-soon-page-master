@@ -1,0 +1,40 @@
+@use '../utils' as u;
+
+.logo {
+   width: auto;
+   height: u.rem(32);
+   @include u.breakpoint-down(medium) {
+      width: auto;
+      height: u.rem(20);
+   }
+}
+
+.icons {
+   @include u.breakpoint-down(medium) {
+      margin-bottom: u.rem(35);
+   }
+}
+
+.circle-icon {
+   width: 30px;
+   height: 30px;
+   border: 2px solid rgb(247, 244, 244);
+   border-radius: 50%;
+   text-align: center;
+   vertical-align: middle;
+   padding: 6px;
+
+   &:hover {
+      border: none;
+      background: var(--blue);
+   }
+}
+
+.fa-brands {
+   color: var(--blue);
+   margin-right: u.rem(16);
+
+   &:hover {
+      color: white
+   }
+}
